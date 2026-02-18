@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kitale Festival</title>
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <h1>Kitale Festival</h1>
+      <button id="menu-toggle" aria-label="Toggle navigation">☰</button>
+      <nav id="main-nav">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#sponsors">Sponsors</a>
+        <a href="#tickets">Ticket Booking</a>
+        <a href="#registration">Registration</a>
+        <a href="#updates">Updates</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero section">
+      <div class="container">
+        <h2>Celebrate Culture, Music, and Community in Kitale</h2>
+        <p>Join us for a dynamic multi-day festival featuring performances, talent showcases, food fairs, and innovation forums.</p>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container">
+        <h2>About</h2>
+        <p>The Kitale Festival brings together artists, entrepreneurs, youth groups, and local communities to celebrate heritage and drive regional tourism growth.</p>
+      </div>
+    </section>
+
+    <section id="sponsors" class="section section-muted">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Sponsors</h2>
+          <p>Loaded dynamically from the festival sponsor database.</p>
+        </div>
+        <div id="sponsor-grid" class="card-grid"></div>
+
+        <h3>Daily Sponsor Update</h3>
+        <form id="sponsor-form" class="form-grid">
+          <input name="name" placeholder="Sponsor name" required />
+          <select name="tier" required>
+            <option value="">Select tier</option>
+            <option>Platinum</option>
+            <option>Gold</option>
+            <option>Silver</option>
+            <option>Community</option>
+          </select>
+          <input name="website" placeholder="Website URL" />
+          <input name="logo_url" placeholder="Logo URL" />
+          <input name="notes" placeholder="Notes" />
+          <button type="submit">Add Sponsor</button>
+        </form>
+      </div>
+    </section>
+
+    <section id="tickets" class="section">
+      <div class="container">
+        <h2>Ticket Booking</h2>
+        <p>Supports multiple ticket types and Stripe payment integration.</p>
+        <form id="booking-form" class="form-grid">
+          <input name="fullName" placeholder="Full name" required />
+          <input type="email" name="email" placeholder="Email" required />
+          <input name="phone" placeholder="Phone" />
+          <select name="ticketType" id="ticket-type" required></select>
+          <input type="number" min="1" value="1" name="quantity" required />
+          <button type="submit">Book Ticket</button>
+        </form>
+        <p id="booking-result" class="status"></p>
+      </div>
+    </section>
+
+    <section id="registration" class="section section-muted">
+      <div class="container">
+        <h2>Participant Registration</h2>
+        <p>Submit your performance or exhibition details.</p>
+        <form id="registration-form" class="form-grid">
+          <input name="fullName" placeholder="Full name" required />
+          <input type="email" name="email" placeholder="Email" required />
+          <input name="phone" placeholder="Phone" />
+          <select name="category" required>
+            <option value="">Category</option>
+            <option>Music</option>
+            <option>Dance</option>
+            <option>Poetry</option>
+            <option>Art Exhibition</option>
+            <option>Startup Pitch</option>
+          </select>
+          <input name="county" placeholder="County" />
+          <textarea name="talentDescription" placeholder="Describe your talent or exhibition"></textarea>
+          <button type="submit">Submit Registration</button>
+        </form>
+        <p id="registration-result" class="status"></p>
+      </div>
+    </section>
+
+    <section id="updates" class="section">
+      <div class="container">
+        <h2>Updates</h2>
+        <ul class="updates-list">
+          <li><strong>Day 1:</strong> Opening ceremony and county cultural parade.</li>
+          <li><strong>Day 2:</strong> Music and dance competitions.</li>
+          <li><strong>Day 3:</strong> Innovation showcase and awards gala.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact" class="section section-muted">
+      <div class="container">
+        <h2>Contact</h2>
+        <form id="contact-form" class="form-grid">
+          <input name="fullName" placeholder="Full name" required />
+          <input type="email" name="email" placeholder="Email" required />
+          <input name="subject" placeholder="Subject" required />
+          <textarea name="message" placeholder="Your message" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+        <p id="contact-result" class="status"></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Kitale Festival. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="/js/app.js"></script>
+</body>
+</html>

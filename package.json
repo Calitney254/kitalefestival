@@ -1,0 +1,16 @@
+{
+  "name": "kitale-festival",
+  "version": "1.0.0",
+  "description": "Responsive Kitale Festival website",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "check": "node --check server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "sqlite3": "^5.1.7",
+    "stripe": "^16.5.0"
+  }
+}
